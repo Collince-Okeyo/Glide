@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:text="URL"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -42,7 +42,7 @@
         android:id="@+id/buttonScaling1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Scale by Fitting"
         app:layout_constraintStart_toStartOf="@+id/buttonUrl"
         app:layout_constraintTop_toBottomOf="@+id/buttonUrl" />
@@ -56,6 +56,54 @@
         app:layout_constraintBottom_toBottomOf="@+id/buttonScaling1"
         app:layout_constraintStart_toEndOf="@+id/buttonScaling1"
         app:layout_constraintTop_toTopOf="@+id/buttonScaling1" />
+
+    <Button
+        android:id="@+id/buttonDrawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Drawable"
+        app:layout_constraintStart_toStartOf="@+id/buttonScaling1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonScaling1" />
+
+    <Button
+        android:id="@+id/buttonPlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonDrawable"
+        app:layout_constraintStart_toEndOf="@+id/buttonDrawable"
+        app:layout_constraintTop_toTopOf="@+id/buttonDrawable" />
+
+    <Button
+        android:id="@+id/buttonError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="Error"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPlaceholder"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlaceholder"
+        app:layout_constraintTop_toTopOf="@+id/buttonPlaceholder" />
+
+    <Button
+        android:id="@+id/buttonRotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rotate"
+        app:layout_constraintStart_toStartOf="@+id/buttonDrawable"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDrawable" />
+
+    <Button
+        android:id="@+id/buttonCircular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Cicular"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonRotate"
+        app:layout_constraintStart_toEndOf="@+id/buttonRotate"
+        app:layout_constraintTop_toTopOf="@+id/buttonRotate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

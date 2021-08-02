@@ -30,23 +30,58 @@ class MainActivity : AppCompatActivity() {
         //Scalling Image by Fitting Center
         binding.buttonScaling1.setOnClickListener {
             Glide.with(this)
-                .load(R.drawable.image)
+                .load(R.drawable.codingtable)
                 .fitCenter()
-                .centerCrop()
                 .into(binding.imageView)
         }
 
         //Scalling Image using Cropping
         binding.buttonScale2.setOnClickListener{
             Glide.with(this)
-                .load(R.drawable.image)
+                .load(R.drawable.codingtable)
                 .centerCrop()
                 .into(binding.imageView)
         }
 
         //Loading Drawable image
+        binding.buttonDrawable.setOnClickListener {
+            Glide.with(this)
+                .load(R.drawable.image)
+                .into(binding.imageView)
+        }
+
+        //Using PlaceHolder
+        binding.buttonPlaceholder.setOnClickListener {
+            Glide.with(this)
+                .load("https://miro.medium.com/max/1200/1*V6-a7s1k5T958JwR9Wuvkw.jpeg")
+                .placeholder(R.drawable.placeholder)
+                .into(binding.imageView)
+        }
+
+        //Error
+        binding.buttonError.setOnClickListener {
+            Glide.with(this)
+                .load("https://miro.medium.com/max/1200/1w.jpeg")
+                .error(R.drawable.error)
+                .into(binding.imageView)
+        }
+
+        /*//Rotate
+        binding.buttonRotate.setOnClickListener {
+            Glide.with(this)
+                .load(R.drawable.image)
+                .fitCenter()
+                .into(binding.imageView)
+        }*/
+
+        //Circular image
+        binding.buttonCircular.setOnClickListener {
+            Glide.with(this)
+                .load(R.drawable.ic_launcher_background)
+                .circleCrop()
+                .into(binding.imageView)
+        }
 
     }
 
-    //
 }
