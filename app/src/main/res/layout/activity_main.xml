@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Scale by Fitting"
+        android:text="FitCenter"
         app:layout_constraintStart_toStartOf="@+id/buttonUrl"
         app:layout_constraintTop_toBottomOf="@+id/buttonUrl" />
 
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:text="Scale by Cropping"
+        android:text="CenterCrop"
         app:layout_constraintBottom_toBottomOf="@+id/buttonScaling1"
         app:layout_constraintStart_toEndOf="@+id/buttonScaling1"
         app:layout_constraintTop_toTopOf="@+id/buttonScaling1" />
@@ -80,18 +80,18 @@
         android:id="@+id/buttonError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="8dp"
         android:text="Error"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonPlaceholder"
-        app:layout_constraintStart_toEndOf="@+id/buttonPlaceholder"
-        app:layout_constraintTop_toTopOf="@+id/buttonPlaceholder" />
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCircular"
+        app:layout_constraintStart_toEndOf="@+id/buttonCircular"
+        app:layout_constraintTop_toTopOf="@+id/buttonCircular" />
 
     <Button
-        android:id="@+id/buttonRotate"
+        android:id="@+id/buttonCache"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Rotate"
+        android:text="Cache"
         app:layout_constraintStart_toStartOf="@+id/buttonDrawable"
         app:layout_constraintTop_toBottomOf="@+id/buttonDrawable" />
 
@@ -100,10 +100,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Cicular"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonRotate"
-        app:layout_constraintStart_toEndOf="@+id/buttonRotate"
-        app:layout_constraintTop_toTopOf="@+id/buttonRotate" />
+        android:text="CircleCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCache"
+        app:layout_constraintStart_toEndOf="@+id/buttonCache"
+        app:layout_constraintTop_toTopOf="@+id/buttonCache" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="158dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/buttonScale2"
+        app:layout_constraintStart_toStartOf="@+id/buttonUrl"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
