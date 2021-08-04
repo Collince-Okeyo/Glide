@@ -13,8 +13,10 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 
 import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.load.resource.gif.GifDrawable
 
-
+import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.transition.Transition
 
 
 class MainActivity : AppCompatActivity() {
@@ -101,6 +103,37 @@ class MainActivity : AppCompatActivity() {
             .load(imageUrl)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(binding.imageView)*/
+
+        //Animated resources and custom Targets
+        binding.buttonTarget.setOnClickListener {
+            Glide.with(this)
+                .asGif()
+                .load(R.drawable.meditation)
+                .into(object : SimpleTarget<GifDrawable>(){
+                    override fun onResourceReady(
+                        resource: GifDrawable,
+                        transition: Transition<in GifDrawable>?
+                    ) {
+                        resource.start()
+                        binding.imageView.setImageDrawable(resource)
+                    }
+
+                })
+        }
+
+       /* Glide.with(fragment)
+            .asGif()
+            .load(url)
+            .into<SimpleTarget<GifDrawable>>(object : SimpleTarget<GifDrawable?>() {
+                override fun onResourceReady(
+                    resource: GifDrawable,
+                    transition: Transition<GifDrawable?>?
+                ) {
+                    resource.start()
+                    // Set the resource wherever you need to use it.
+                }
+            })*/
+
 
     }
 
